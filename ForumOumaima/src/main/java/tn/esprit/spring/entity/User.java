@@ -54,6 +54,8 @@ public class User implements Serializable{
 	Role role;
 	private double latitude;
 	private double longitude;
+        @OneToMany( cascade=CascadeType.ALL,mappedBy="user")
+        private List<OrderDelivery> orderDeliverys;
 	
 	
 	
